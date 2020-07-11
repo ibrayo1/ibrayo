@@ -4,7 +4,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const server = require('http').createServer(app);
 const mongoose = require('mongoose');
+const cors = require('cors');
 
+app.use(cors());
 
 // body parser middleware
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,6 +19,7 @@ mongoose
     .catch(err => console.log(err));
 
 // bring in routes
+app.use('/', require('./routes/index'));
 app.use('/api/projects', require('./routes/api/projects'));
 
 const port = process.env.PORT || 5000;
