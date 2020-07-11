@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+#canvas{
+  position: absolute;
+}
+
 /* navbar css */
 .navbar-expand-md{
   padding: 10px 16px;
@@ -28,7 +32,7 @@ body {
 .navbar-light .navbar-nav .nav-link:after {
   display: block;
   content: "";
-  border-bottom: 2px solid #0cebeb;
+  border-bottom: 2px solid #313743;
   transform: scaleX(0);
   transition: transform .25s ease-in-out;
 }
@@ -72,8 +76,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -65px;
-    margin-bottom: -75px;
+}
+
+.home-container{
+  position: relative;
+  overflow: hidden;
 }
 
 #about{
@@ -103,10 +110,19 @@ body {
 }
 
 /* css for introduction text in home section */
+.intro-container{
+  position: absolute;
+  display: inline-block;
+}
+
 .intro{
   color: white;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+}
+
+.intro-summary{
+  display: inline-block;
 }
 
 /* css for contact form */
@@ -251,4 +267,54 @@ a.icon:hover, .email-icon:hover{
 .social-media{
   text-align: center;
   padding: 0;
+}
+
+@media (max-width: 900px) {
+  
+  h1.intro-summary{
+    font-size: 40px;
+  }
+  
+  h1.section-title{
+    font-size: 40px;
+  }
+  
+  .underline{
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  
+  h1.intro-summary{
+    font-size: 32px;
+  }
+
+  h1.section-title{
+    font-size: 32px;
+  }
+  
+  .underline{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 500px){
+  
+  h1.intro-summary{
+    font-size: 26px;
+  }
+
+  h1.section-title{
+    font-size: 28px;
+  }
+
+  .underline{
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  
 }

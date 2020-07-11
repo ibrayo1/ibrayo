@@ -33,7 +33,7 @@ class AppNavbar extends Component {
     }
 
     listenScrollEvent = e => {
-        if (window.scrollY > 56) {
+        if (window.scrollY > 20) {
             this.setState({bgcolor: 'white'});
             this.setState({fontColor: 'black'});
             this.setState({navItemColor: 'black'});
