@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Axios from "axios";
-import { AvGroup, AvForm, AvInput } from 'availity-reactstrap-validation';
+import { AvGroup, AvForm, AvField } from 'availity-reactstrap-validation';
 import { Alert, Container, Card, CardBody, Label, Row, Col, Button } from 'reactstrap';
 
 class Contact extends Component {
@@ -79,16 +79,16 @@ class Contact extends Component {
                                         <Col lg={{size: "7"}}>
                                             <AvForm style={{color: '#000000'}} onValidSubmit={this.handleValidSubmit} onInvalidSubmit={this.handleInvalidSubmit} ref={c => (this.form = c)}>
                                                 <AvGroup>
-                                                    <AvInput type="text" name="name" id="name" required/>
                                                     <Label for="name">Name</Label>
+                                                    <AvField type="text" name="name" id="name" errorMessage="Please enter a name" required />
                                                 </AvGroup>
                                                 <AvGroup>
-                                                    <AvInput type="email" name="email" id="email" required/>
                                                     <Label for="name">Email</Label>
+                                                    <AvField type="email" name="email" id="email" errorMessage="Please enter a valid email" required/>
                                                 </AvGroup>
                                                 <AvGroup>
-                                                    <AvInput type="textarea" rows="5" name="message" id="message" />
                                                     <Label for="message">Message</Label>
+                                                    <AvField type="textarea" rows="5" name="message" id="message" />
                                                 </AvGroup>
                                                 <Alert color="success" isOpen={this.state.visible} toggle={this.onDismiss}>
                                                     Your message was sent successfully, Thanks!
