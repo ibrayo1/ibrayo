@@ -166,7 +166,7 @@ textarea.form-control{
 
 /* footer css */
 #footer{
-  background-color: #313743;
+  background-color: #00002E;
   padding: 22px;
 }
 
@@ -224,7 +224,6 @@ textarea.form-control{
 
 .icon, .email-icon{
   display: inline-block;
-  font-size: 45px;
 }
 
 a.icon, .email-icon{
@@ -267,6 +266,41 @@ a.icon:hover, .email-icon:hover{
 
 .alert {
   display: inline-block;
+}
+
+/* project cards css */
+.card{
+  margin-top: 40px;
+  border-radius: 0px;
+}
+
+.card-img{
+  margin-top: -40px;
+  border-radius: 0px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.card-title{
+  margin: 25px 0px 0px 0px;
+  font-size: 26px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+.card-stackname{
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.card-subtitle{
+  margin: -10px -10px -10px 0px;
+  text-align: right;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media (max-width: 900px) {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Icon from './Icon';
 import {
     Container,
     Row,
@@ -27,15 +28,12 @@ class About extends Component {
                                 </p>
 
                                 <div className="social-media">
-                                    <a className="icon" href="https://www.linkedin.com/in/ibrayo1128/" target="_blank" rel="noopener noreferrer">
-                                        <i className="fa fa-linkedin-square" aria-hidden="true"></i>
-                                    </a>
-                                    <a className="icon" href="https://github.com/ibrayo1" target="_blank" rel="noopener noreferrer">
-                                        <i className="fa fa-github-square" aria-hidden="true"></i>
-                                    </a>
-                                    <a className="email-icon" href="#contact" >
-                                        <i className="fa fa-envelope-square" aria-hidden="true"></i>
-                                    </a>
+                                
+                                    <Icon class="icon" name="fa fa-linkedin-square" link="https://www.linkedin.com/in/ibrayo1128/" tar="_blank" size="45px" />
+
+                                    <Icon class="icon" name="fa fa-github-square" link="https://github.com/ibrayo1" tar="_blank" size="45px" />
+                                   
+                                    <Icon class="email-icon" name="fa fa-envelope-square" link="#contact" size="45px" />
                                 </div>
 
                                 {/* <div style={{textAlign: 'center'}}>

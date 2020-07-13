@@ -15,7 +15,7 @@ function setup(){
 }
 
 function draw() {
-    background('rgb(49,55,67)');
+    background('rgb(0,0,46)');
     particles.forEach((p, index) => {
         p.update();
         p.draw();
@@ -39,7 +39,7 @@ class Particle {
         this.size = 6;
         this.hue = random(0,231);
         this.counter = 1;
-        this.velocity = createVector(random(-1.5), random(1.5));
+        this.velocity = createVector(random(-1.5, 1.5), random(-1.5, 1.5));
     }
 
     update() {

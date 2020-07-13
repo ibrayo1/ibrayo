@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProjectCard from './ProjectCard';
 import {
     Container,
-    CardDeck,
+    Row,
     Col
 } from 'reactstrap';
 
@@ -10,21 +10,26 @@ class Portfolio extends Component {
     render(){
         return(
             <section id="portfolio">
-                <Container>
-                    <Col xs="12">
-                        <h1 className="section-title">PROJECTS</h1>
-                        <div className="underline"></div>
+                <Container fluid>
+                    <h1 className="section-title">PROJECTS</h1>
+                    <div className="underline"></div>
 
-                        <CardDeck>
+                    <Row className="justify-content-center">
 
+                        <Col lg={{size: "5"}}>
                             <ProjectCard />
+                        </Col>
 
+                        
+                        <Col lg={{size: "5"}}>
                             <ProjectCard />
-
+                        </Col>
+                        
+                        <Col lg={{size: "5"}}>
                             <ProjectCard />
+                        </Col>
 
-                        </CardDeck>
-                    </Col>
+                    </Row>
                 </Container>
             </section>
         )
