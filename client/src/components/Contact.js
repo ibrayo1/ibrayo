@@ -12,11 +12,11 @@ class Contact extends Component {
         this.handleInvalidSubmit = this.handleInvalidSubmit.bind(this);
         this.onDismiss = this.onDismiss.bind(this);
 
-        this.state = {name: false, email: false, message: false, visible: false};
+        this.state = {name: false, email: false, message: false, visible: 'hidden'};
     }
 
     onDismiss(){
-        this.setState({visible: false});
+        this.setState({visible: 'hidden'});
     }
 
     handleValidSubmit(event, values) {
@@ -48,7 +48,7 @@ class Contact extends Component {
         }).then(res => {
           if (res.data.msg === "suc") {
             console.log('SUCCESS');
-            this.setState({visible: true});
+            this.setState({visible: 'visible'});
             this.form && this.form.reset();
           } else {
             console.log("FAILURE TO SEND");
@@ -73,7 +73,7 @@ class Contact extends Component {
                             <Card className="contactCard p-3" >
                                 <CardBody>
                                     <Row>
-                                        <Col lg={{size: "5"}} style={{textAlign: 'center'}}>
+                                        <Col lg={{size: "5"}} className="my-auto">
                                             <img src={require('../images/mail.png')} className="img-fluid" alt="letter" style={{padding: 15}}/>
                                         </Col>
                                         <Col lg={{size: "7"}}>
@@ -90,7 +90,7 @@ class Contact extends Component {
                                                     <Label for="message">Message</Label>
                                                     <AvField type="textarea" rows="5" name="message" id="message" />
                                                 </AvGroup>
-                                                <Alert color="success" isOpen={this.state.visible} toggle={this.onDismiss}>
+                                                <Alert color="success" style={{ visibility: this.state.visible}} toggle={this.onDismiss} fade={false}>
                                                     Your message was sent successfully, Thanks!
                                                 </Alert>
                                                 <Button className="messagebtn" >SEND</Button>

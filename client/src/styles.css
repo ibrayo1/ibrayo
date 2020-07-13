@@ -265,6 +265,10 @@ a.icon:hover, .email-icon:hover{
   padding: 0;
 }
 
+.alert {
+  display: inline-block;
+}
+
 @media (max-width: 900px) {
   
   h1.intro-summary{

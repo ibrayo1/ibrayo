@@ -7,7 +7,7 @@ function setup(){
     cnv = createCanvas(windowWidth, windowHeight);
     cnv.parent('canvas');
 
-    particlesLength = Math.floor(window.innerWidth / 15);
+    particlesLength = Math.floor(window.innerWidth / 13);
 
     for(let i = 0; i < particlesLength; i++){
         particles.push(new Particle());
