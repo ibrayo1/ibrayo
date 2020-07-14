@@ -24,7 +24,7 @@ class Home extends Component{
                     <Container className="intro-container" fluid>
                         <div className="intro">
                             <h1 className="intro-summary">
-                                Hello, I'm Ibrahim Ayoob
+                                Hello, I'm Abe Ayoob
                                 <br/>
                                 I'm a Software Developer
                             </h1>

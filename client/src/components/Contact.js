@@ -59,8 +59,8 @@ class Contact extends Component {
     render(){
         return(
             <div>
-                <svg preserveAspectRatio="none" viewBox="0 0 810 102" height="75" width="100%" className="gradient-bg" >
-                    <path d="M 0 0 Q 129 25 260 35 L 309 74 L 509 74 L 560 37 Q 689 26 809 0 " fill="white" stroke="white" strokeWidth="3"></path>
+                <svg preserveAspectRatio="none" viewBox="0 0 810 102" height="75" width="100%"  >
+                    <path d="M 0 0 Q 129 25 260 35 L 309 74 L 509 74 L 560 37 Q 689 26 809 0 " fill="#00002E" stroke="#00002E"></path>
                 </svg>
     
                 <section id="contact">

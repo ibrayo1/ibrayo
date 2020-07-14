@@ -18,27 +18,20 @@ class ProjectCard extends Component {
             <Card className="mb-3">
                 <CardBody>
                     <Row>
-                        <Col lg={{size: "7"}}>
-                            <CardImg width="100%" src="https://via.placeholder.com/318x180" alt="Card image cap" />
-                            <CardTitle>MASJIDSUNNAHCHI.ORG</CardTitle>
+                        <Col lg={{size: "8"}}>
+                            <CardImg src={require('../uploads/masjidsunnahchi.svg')} alt="Card image cap" />
+                            <CardTitle>{this.props.name}</CardTitle>
                             <CardSubtitle>
-                                <Icon class="icon" name="fa fa-eye" link="https://masjidsunnahchi.org" tar="_blank" size="26px" />
-                                <Icon class="icon" name="fa fa-github" link="https://github.com/masjidsunnah/sunnah" tar="_blank" size="26px" />
+                                <Icon class="icon" name="fa fa-eye" link={this.props.visitlink} tar="_blank" size="26px" />
+                                <Icon class="icon" name="fa fa-github" link={this.props.gitlink} tar="_blank" size="26px" />
                             </CardSubtitle>
                         </Col>
-                        <Col lg={{size: "5"}} >
+                        <Col lg={{size: "4"}} >
                             <h2 className="card-stackname">MERN STACK</h2>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardText>{this.props.description}</CardText>
                         </Col>
                     </Row>
                 </CardBody>
-                {/* <CardImg top width="100%" src="https://via.placeholder.com/318x180" alt="Card image cap" />
-                <CardBody>
-                    <CardTitle>Card title</CardTitle>
-                    <CardSubtitle>Card subtitle</CardSubtitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                    <Button>Button</Button>
-                </CardBody> */}
             </Card>
         )
     }
