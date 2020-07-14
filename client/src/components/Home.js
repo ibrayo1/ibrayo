@@ -17,7 +17,7 @@ class Home extends Component{
             <div className="home-container">
                 <div id="canvas"></div>
 
-                <svg preserveAspectRatio="none" viewBox="0 0 1000 65" height="65" style={{backgroundColor: 'transparent', position: 'absolute'}} width="100%">
+                <svg preserveAspectRatio="none" viewBox="0 0 1000 65" height="65" style={{position: 'absolute'}} width="100%">
                     <path d="M 0 0 Q 255 5 420 30 Q 680 65 1000 65 L 1000 0 Z" fill="white" stroke="white"></path>
                 </svg>
                 <section id="home">

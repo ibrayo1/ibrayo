@@ -1,8 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  --lh: 1.4rem;
-  line-height: var(--lh);
 }
 
 #canvas{
@@ -54,6 +52,7 @@ body {
   color: #313743;
   text-align: center;
   padding-bottom: 5px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .underline{
