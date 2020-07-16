@@ -58,51 +58,45 @@ class Contact extends Component {
  
     render(){
         return(
-            <div>
-                <svg preserveAspectRatio="none" viewBox="0 0 810 102" height="75" width="100%"  >
-                    <path d="M 0 0 Q 129 25 260 35 L 309 74 L 509 74 L 560 37 Q 689 26 809 0 " fill="#00002E" stroke="#00002E"></path>
-                </svg>
-    
-                <section id="contact">
-                
-                    <h1 className="section-title">CONTACT</h1>
-                    <div className="underline"></div>
-    
-                    <Container >
-                        <Col lg={{size: "10", offset: "1"}}>
-                            <Card className="contactCard p-3" >
-                                <CardBody>
-                                    <Row>
-                                        <Col lg={{size: "5"}} className="my-auto">
-                                            <img src={require('../images/mail.png')} className="img-fluid" alt="letter" style={{padding: 15}}/>
-                                        </Col>
-                                        <Col lg={{size: "7"}}>
-                                            <AvForm style={{color: '#000000'}} onValidSubmit={this.handleValidSubmit} onInvalidSubmit={this.handleInvalidSubmit} ref={c => (this.form = c)}>
-                                                <AvGroup>
-                                                    <Label for="name">Name</Label>
-                                                    <AvField type="text" name="name" id="name" errorMessage="Please enter a name" required />
-                                                </AvGroup>
-                                                <AvGroup>
-                                                    <Label for="name">Email</Label>
-                                                    <AvField type="email" name="email" id="email" errorMessage="Please enter a valid email" required/>
-                                                </AvGroup>
-                                                <AvGroup>
-                                                    <Label for="message">Message</Label>
-                                                    <AvField type="textarea" rows="5" name="message" id="message" />
-                                                </AvGroup>
-                                                <Alert color="success" style={{ visibility: this.state.visible}} toggle={this.onDismiss} fade={false}>
-                                                    Your message was sent successfully, Thanks!
-                                                </Alert>
-                                                <Button className="messagebtn" >SEND</Button>
-                                            </AvForm>
-                                        </Col>
-                                    </Row>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    </Container>
-                </section>
-            </div>
+            <section id="contact">
+            
+                <h1 className="section-title">CONTACT</h1>
+                <div className="underline"></div>
+
+                <Container >
+                    <Col lg={{size: "10", offset: "1"}}>
+                        <Card className="contactCard p-3" >
+                            <CardBody>
+                                <Row>
+                                    <Col lg={{size: "5"}} className="my-auto">
+                                        <img src={require('../images/mail.png')} className="img-fluid" alt="letter" style={{padding: 15}}/>
+                                    </Col>
+                                    <Col lg={{size: "7"}}>
+                                        <AvForm style={{color: '#000000'}} onValidSubmit={this.handleValidSubmit} onInvalidSubmit={this.handleInvalidSubmit} ref={c => (this.form = c)}>
+                                            <AvGroup>
+                                                <Label for="name">Name</Label>
+                                                <AvField type="text" name="name" id="name" errorMessage="Please enter a name" required />
+                                            </AvGroup>
+                                            <AvGroup>
+                                                <Label for="name">Email</Label>
+                                                <AvField type="email" name="email" id="email" errorMessage="Please enter a valid email" required/>
+                                            </AvGroup>
+                                            <AvGroup>
+                                                <Label for="message">Message</Label>
+                                                <AvField type="textarea" rows="5" name="message" id="message" />
+                                            </AvGroup>
+                                            <Alert color="success" style={{ visibility: this.state.visible}} toggle={this.onDismiss} fade={false}>
+                                                Your message was sent successfully, Thanks!
+                                            </Alert>
+                                            <Button className="messagebtn" >SEND</Button>
+                                        </AvForm>
+                                    </Col>
+                                </Row>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                </Container>
+            </section>
         );
     }
 }

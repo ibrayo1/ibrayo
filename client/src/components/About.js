@@ -46,9 +46,6 @@ class About extends Component {
                     </Container>
                     <br/><br/><br/><br/>
                 </section>
-                <svg preserveAspectRatio="none" viewBox="0 0 1000 75" height="75" width="100%">
-                    <path d="M 0 75 L 1005 0 L 1005 75 Z" fill="#00002E" stroke="#00002E"></path>
-                </svg>
             </div>
         )
     }

@@ -19,7 +19,7 @@ class ProjectCard extends Component {
                 <CardBody>
                     <Row>
                         <Col lg={{size: "8"}}>
-                            <CardImg src={require('../uploads/masjidsunnahchi.svg')} alt="Card image cap" />
+                            <CardImg src={require('../uploads/' + this.props.thumbnail)} alt="thumbnail" />
                             <CardTitle>{this.props.name}</CardTitle>
                             <CardSubtitle>
                                 <Icon class="icon" name="fa fa-eye" link={this.props.visitlink} tar="_blank" size="26px" />
@@ -27,7 +27,7 @@ class ProjectCard extends Component {
                             </CardSubtitle>
                         </Col>
                         <Col lg={{size: "4"}} >
-                            <h2 className="card-stackname">MERN STACK</h2>
+                            <h2 className="card-stackname">{this.props.stackname}</h2>
                             <CardText>{this.props.description}</CardText>
                         </Col>
                     </Row>

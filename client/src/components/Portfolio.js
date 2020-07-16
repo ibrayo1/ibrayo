@@ -19,7 +19,9 @@ class Portfolio extends Component {
                         <Col lg={{size: "5"}}>
                             <ProjectCard 
                                 name="MASJIDUSNNAHCHI.ORG"
-                                description="masjidsunnahchi.org is a web app created for a nonprofit organization 
+                                stackname="Express / Node.js"
+                                thumbnail="masjidsunnahchi.svg"
+                                description="masjidsunnahchi.org is a web app created for a nonprofit organization
                                 called Northshore Islamic Center NFP. This web app allows them to post 
                                 important updates and events, collect money for donations and charity, 
                                 and provides an essential platform for them to connect with their 
@@ -29,13 +31,24 @@ class Portfolio extends Component {
                             />
                         </Col>
 
-                        
                         <Col lg={{size: "5"}}>
-                            <ProjectCard name="HEARTAPP" />
+                            <ProjectCard 
+                                name="HEARTAPP"
+                                stackname="Express / Node.js"
+                                thumbnail="heartapp.svg"
+                                gitlink="https://github.com/ibrayo1/HeartApp"
+                                visitlink="http://heartapp494.herokuapp.com/"
+                            />
                         </Col>
                         
                         <Col lg={{size: "5"}}>
-                            <ProjectCard name="GAITAN" />
+                            <ProjectCard 
+                                name="GAITAN" 
+                                stackname="Express / Node.js"
+                                thumbnail="gaitan.svg"
+                                gitlink="https://github.com/ibrayo1/GaitAn"
+                                visitlink="http://gaitan.herokuapp.com/"
+                            />
                         </Col>
 
                     </Row>

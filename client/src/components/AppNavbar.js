@@ -6,8 +6,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    Container
+    NavLink
 } from 'reactstrap';
 
 class AppNavbar extends Component {
@@ -53,29 +52,27 @@ class AppNavbar extends Component {
     render() {
         return(
             <Navbar color={this.state.bgcolor} light expand="md" fixed="top" style={{height: this.state.navHeight}}>
-                <Container>
-                    <NavbarBrand style={{color: this.state.fontColor}} href="#home" onClick={this.closeNavbar}>HOME</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink style={{color: this.state.navItemColor}} href="#about" onClick={this.closeNavbar}>
-                                    ABOUT
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink style={{color: this.state.navItemColor}} href="#portfolio" onClick={this.closeNavbar}>
-                                    PORTFOLIO
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink style={{color: this.state.navItemColor}} href="#contact" onClick={this.closeNavbar}>
-                                    CONTACT
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Container>
+                <NavbarBrand style={{color: this.state.fontColor}} href="#home" onClick={this.closeNavbar}>HOME</NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
+                        <NavItem>
+                            <NavLink style={{color: this.state.navItemColor}} href="#about" onClick={this.closeNavbar}>
+                                ABOUT
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink style={{color: this.state.navItemColor}} href="#portfolio" onClick={this.closeNavbar}>
+                                PORTFOLIO
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink style={{color: this.state.navItemColor}} href="#contact" onClick={this.closeNavbar}>
+                                CONTACT
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
             </Navbar>
         )
     }

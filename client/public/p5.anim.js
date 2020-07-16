@@ -15,7 +15,7 @@ function setup(){
 }
 
 function draw() {
-    background('rgb(0,0,46)');
+    background('rgb(20,41,84)');
     particles.forEach((p, index) => {
         p.update();
         p.draw();

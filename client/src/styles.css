@@ -67,39 +67,29 @@ body {
   margin-bottom: 50px;
 }
 
-/* general css for all sections */
-#home{
-    /* background-image: url('https://wallpapercave.com/wp/wp1904056.jpg'); */
-    background-color: #313743;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* css for sections */
 
-.home-container{
+#home{
   position: relative;
+  height: 100vh;
   overflow: hidden;
 }
 
 #about{
   background-image: linear-gradient(to bottom, #FFFFFF 20%, #ECE9E6);
   padding-top: 80px;
-  padding-bottom: 80px;
-  margin-bottom: -75px;
 }
 
 #portfolio{
-  background: linear-gradient(to bottom,#00002E, #090947, #00002E);
+  background: linear-gradient(to bottom,#0072ff, #00c6ff, #0072ff);
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 #contact{
-  margin-top: -75px;
-  padding-top: 100px;
+  padding-top: 60px;
   padding-bottom: 100px;
-  background-image: linear-gradient(to bottom right, #0cebeb, #29ffc6);
+  background-image: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
 }
 
 /* css for cards for projects */
@@ -109,20 +99,16 @@ body {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
-/* css for introduction text in home section */
-.intro-container{
+.intro{
   position: absolute;
   display: inline-block;
-}
-
-.intro{
   color: white;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-}
-
-.intro-summary{
-  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 /* css for contact form */
@@ -170,7 +156,7 @@ textarea.form-control{
 
 /* footer css */
 #footer{
-  background-color: #00002E;
+  background-color: #142954;
   padding: 22px;
 }
 
@@ -328,7 +314,7 @@ a.icon:hover, .email-icon:hover{
 
 @media (max-width: 900px) {
   
-  h1.intro-summary{
+  .intro{
     font-size: 40px;
   }
   
@@ -345,7 +331,7 @@ a.icon:hover, .email-icon:hover{
 
 @media (max-width: 768px) {
   
-  h1.intro-summary{
+  .intro{
     font-size: 32px;
   }
 
@@ -361,7 +347,7 @@ a.icon:hover, .email-icon:hover{
 
 @media (max-width: 500px){
   
-  h1.intro-summary{
+  .intro{
     font-size: 26px;
   }
 
