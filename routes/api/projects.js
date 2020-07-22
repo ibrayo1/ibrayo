@@ -8,6 +8,7 @@ const Project = require('../../models/Project');
 // @desc GET all projects
 // @access Public
 router.get('/', function(req, res){
+    console.log('bruh');
     Project.find()
         .sort({ date: -1 })
         .then(projects => res.json(projects))

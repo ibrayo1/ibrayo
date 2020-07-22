@@ -29,6 +29,7 @@ class ProjectCard extends Component {
                         <Col lg={{size: "4"}} >
                             <h2 className="card-stackname">{this.props.stackname}</h2>
                             <CardText>{this.props.description}</CardText>
+                            <button className="learn-more">Learn More</button>
                         </Col>
                     </Row>
                 </CardBody>

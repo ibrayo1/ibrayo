@@ -85,7 +85,7 @@ class Contact extends Component {
                                                 <Label for="message">Message</Label>
                                                 <AvField type="textarea" rows="5" name="message" id="message" />
                                             </AvGroup>
-                                            <Alert color="success" style={{ visibility: this.state.visible}} toggle={this.onDismiss} fade={false}>
+                                            <Alert color="success" style={{ visibility: this.state.visible}} toggle={this.onDismiss} >
                                                 Your message was sent successfully, Thanks!
                                             </Alert>
                                             <Button className="messagebtn" >SEND</Button>

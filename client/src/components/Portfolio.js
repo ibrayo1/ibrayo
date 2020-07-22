@@ -18,7 +18,7 @@ class Portfolio extends Component {
 
                         <Col lg={{size: "5"}}>
                             <ProjectCard 
-                                name="MASJIDUSNNAHCHI.ORG"
+                                name="MASJIDSUNNAHCHI.ORG"
                                 stackname="Express / Node.js"
                                 thumbnail="masjidsunnahchi.svg"
                                 description="masjidsunnahchi.org is a web app created for a nonprofit organization

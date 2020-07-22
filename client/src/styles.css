@@ -101,7 +101,7 @@ body {
 
 .intro{
   position: absolute;
-  display: inline-block;
+  display: block;
   color: white;
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -254,10 +254,6 @@ a.icon:hover, .email-icon:hover{
   padding: 0;
 }
 
-.alert {
-  display: inline-block;
-}
-
 /* project cards css */
 .card{
   margin-top: 55px;
@@ -311,6 +307,28 @@ a.icon:hover, .email-icon:hover{
   -webkit-box-orient: vertical;  
 }
 
+.learn-more{
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  background-color: transparent;
+  border-radius: 5px;
+  float: right;
+  font-size: 16px;
+  border: 2px solid black;
+  text-transform: uppercase;
+  padding: 5px 12px 5px 12px;
+  transition: 0.25s all ease-in-out;
+}
+
+.learn-more:hover {
+  border: 2px solid #142954;
+  background-color: #142954;
+  color: white;
+}
+
+.learn-more:focus{
+  outline: none;
+}
 
 @media (max-width: 900px) {
   
