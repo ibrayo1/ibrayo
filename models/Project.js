@@ -5,6 +5,27 @@ const Schema = mongoose.Schema;
 const ProjectSchema = new Schema({
     name: {
         type: String,
+        required: true,
+        unique: true
+    },
+    stackname:{
+        type: String,
+        required: true
+    },
+    projdesc: {
+        type: String,
+        required: true
+    },
+    projgitlink: {
+        type: String,
+        default: "N/A"
+    },
+    projlivelink: {
+        type: String,
+        default: "N/A"
+    },
+    thumbnail: {
+        type: String,
         required: true
     },
     date: {

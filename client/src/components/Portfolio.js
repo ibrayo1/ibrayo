@@ -33,6 +33,16 @@ class Portfolio extends Component {
 
                         <Col lg={{size: "5"}}>
                             <ProjectCard 
+                                name="DATINGAPP" 
+                                stackname="ASP.NET / Angular"
+                                thumbnail="datingappspa.svg"
+                                gitlink="https://github.com/ibrayo1/DatingApp"
+                                visitlink=""
+                            />
+                        </Col>
+
+                        <Col lg={{size: "5"}}>
+                            <ProjectCard 
                                 name="HEARTAPP"
                                 stackname="Express / Node.js"
                                 thumbnail="heartapp.svg"

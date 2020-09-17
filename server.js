@@ -14,13 +14,13 @@ app.use(bodyParser.json());
 
 // connect to mongodb
 mongoose
-    .connect(process.env.db,  { useNewUrlParser: true, useUnifiedTopology: true})
+    .connect(process.env.db,  { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
 // bring in routes
 app.use('/', require('./routes/api/index'));
-app.use('/api/projects', require('./routes/api/projects'));
+app.use('/api', require('./routes/api/projects'));
 
 const port = process.env.PORT || 5000;
 
