@@ -363,9 +363,15 @@ a.icon:hover, .email-icon:hover{
 }
 
 .learnFooter{
+  display: flex;
   border-top: none;
   padding: 16px;
   text-align: right;
+}
+
+.learnMoreIcons{
+  flex: 1;
+  text-align: left;
 }
 
 .learnModalBtn{

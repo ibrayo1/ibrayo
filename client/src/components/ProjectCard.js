@@ -7,10 +7,8 @@ import {
 const ProjectCard = (props) => {
 
     const {
-        name, stackname,
-        thumbnail, description,
-        gitlink, visitlink,
-        images
+        name, stackname, thumbnail, images,
+        description, gitlink, visitlink,
     } = props;
 
     return(

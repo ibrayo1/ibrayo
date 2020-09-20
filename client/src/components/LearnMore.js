@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Modal} from 'reactstrap';
 import Gallery from './Gallery';
+import Icon from './Icon';
 
 const LearnMore = (props) => {
 
@@ -9,7 +10,7 @@ const LearnMore = (props) => {
         projdesc,
         images,
         gitlink,
-        livelink,
+        visitlink,
         buttonLabel
     } = props;
 
@@ -31,6 +32,12 @@ const LearnMore = (props) => {
                 </p>
 
                 <div className="learnFooter">
+                    
+                    <div className="learnMoreIcons">
+                        { gitlink ? <Icon class="icon" name="fa fa-github" link={gitlink} tar="_blank" size="32px" /> : null}
+                        { visitlink ? <Icon class="icon" name="fa fa-external-link-square" link={visitlink} tar="_blank" size="32px" /> : null}
+                    </div>
+
                     <button className="learnModalBtn" onClick={toggle}>
                         Close
                     </button>
