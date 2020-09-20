@@ -40,7 +40,7 @@ class Contact extends Component {
 
         Axios({
           method: "POST",
-          url: "http://localhost:5000/send",
+          url: "/send",
           data: { name, email, message },
           headers: {
             "Content-Type": "application/json"

@@ -15,7 +15,7 @@ class Portfolio extends Component {
     // get all the projects from the api
     async componentDidMount(){
         try{
-            const resp = await Axios.get(`http://localhost:5000/api/projects`);
+            const resp = await Axios.get(`/api/projects`);
             this.setState({projs: resp.data});
             //console.log(this.state.projs);
         } catch(err) {
