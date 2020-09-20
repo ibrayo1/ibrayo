@@ -14,13 +14,13 @@ class Home extends Component{
             <div id="home">
                 <div id="canvas"></div>
                 
-                    <div className="intro">
-                        <h1>
-                            Hello, I'm Ibrahim Ayoob
-                            <br/>
-                            I'm a Software Developer
-                        </h1>
-                    </div>
+                <div className="intro">
+                    <h1 className="intro-h1">
+                        Hello, I'm Ibrahim Ayoob
+                        <br/>
+                        I'm a Software Developer
+                    </h1>
+                </div>
 
             </div>
         );

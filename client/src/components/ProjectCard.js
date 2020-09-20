@@ -1,41 +1,50 @@
-import React, {Component} from 'react';
-import Icon from './Icon';
+import React from 'react';
+import LearnMore from './LearnMore';
 import {
-    Card,
-    CardImg,
-    CardBody,
-    CardTitle,
-    CardSubtitle,
-    CardText,
-    Row,
-    Col
+    Card, CardBody
 } from 'reactstrap';
 
-class ProjectCard extends Component {
+const ProjectCard = (props) => {
 
-    render(){
-        return(
-            <Card className="mb-3">
-                <CardBody>
-                    <Row>
-                        <Col lg={{size: "8"}}>
-                            <CardImg src={require('../uploads/' + this.props.thumbnail)} alt="thumbnail" />
-                            <CardTitle>{this.props.name}</CardTitle>
-                            <CardSubtitle>
-                                <Icon class="icon" name="fa fa-eye" link={this.props.visitlink} tar="_blank" size="26px" />
-                                <Icon class="icon" name="fa fa-github" link={this.props.gitlink} tar="_blank" size="26px" />
-                            </CardSubtitle>
-                        </Col>
-                        <Col lg={{size: "4"}} >
-                            <h2 className="card-stackname">{this.props.stackname}</h2>
-                            <CardText>{this.props.description}</CardText>
-                            <button className="learn-more">Learn More</button>
-                        </Col>
-                    </Row>
-                </CardBody>
-            </Card>
-        )
-    }
+    const {
+        name, stackname,
+        thumbnail, description,
+        gitlink, visitlink,
+        images
+    } = props;
+
+    return(
+        <Card className="projectCard">
+            <CardBody>
+                <div className="projectCardImg">
+                    <img className="img-fluid" src={thumbnail} alt="thumbnail" />
+                </div>
+
+                <div className="projectCardTitle">
+                    <h3 style={{marginBottom: 0}}>{name}</h3>
+                </div>
+
+                <div className="projectCardSub">
+                    <h5>{stackname}</h5>
+                </div>
+
+                <hr style={{marginTop: 10, marginBottom: 10}} />
+
+                <p className="projectCardSum">
+                    {description}
+                </p>
+
+                <LearnMore
+                    projname={name}
+                    projdesc={description}
+                    images={images}
+                    gitlink={gitlink}
+                    visitlink={visitlink}
+                    buttonLabel="Learn More"
+                />
+            </CardBody>
+        </Card>
+    );
 }
 
 export default ProjectCard;

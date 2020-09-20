@@ -17,17 +17,18 @@ const ProjectSchema = new Schema({
         required: true
     },
     projgitlink: {
-        type: String,
-        default: "N/A"
+        type: String
     },
     projlivelink: {
-        type: String,
-        default: "N/A"
+        type: String
     },
     thumbnail: {
         type: String,
         required: true
     },
+    images: [{
+        type: String
+    }],
     date: {
         type: Date,
         default: Date.now

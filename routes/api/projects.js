@@ -3,6 +3,13 @@ const { check, validationResult } = require('express-validator');
 const cloudinary = require('cloudinary').v2;
 const router = express.Router();
 
+// create custom asyncForEach function
+async function asyncForEach(array, callback) {
+    for (let index = 0; index < array.length; index++) {
+        await callback(array[index], index, array);
+    }
+}
+
 // configure cloudinary
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
@@ -39,7 +46,7 @@ async (req, res) => {
         return res.status(400).json({ errors: errors.array() });
     
     // extract data from post request
-    const { name, stackname, projdesc, projgitlink, projlivelink, thumbnail } = req.body;
+    const { name, stackname, projdesc, projgitlink, projlivelink, thumbnail, images } = req.body;
 
     try{
         // check if user exists
@@ -49,25 +56,34 @@ async (req, res) => {
             return res.status(400).json({ errors: [ { msg: "Project already exists" } ] })
         }
 
-        // upload image to cloudinary
-        let imageUrl;
-        await cloudinary.uploader.upload(thumbnail, function(err, result){
-            if(err)
-                return res.status(500).json({errors: [ { msg: 'Image failed to upload' } ]});
-            imageUrl = result.url;
-        });
-
         // create new proj 
         project = new Project({
             name: name,
             stackname: stackname,
             projdesc: projdesc,
             projgitlink: projgitlink,
-            projlivelink: projlivelink,
-            thumbnail: imageUrl
+            projlivelink: projlivelink
         });
 
-        await project.save();
+        // upload thumbnail image to cloudinary
+        await cloudinary.uploader.upload(thumbnail, function(err, result){
+            if(err)
+                return res.status(500).json({errors: [ { msg: 'Image failed to upload' } ]});
+            project.thumbnail = result.url;
+        });
+
+        const uploadImages = async () => {
+            await asyncForEach(images, async (image) => {
+                await cloudinary.uploader.upload(image, function(err, result){
+                    if(err)
+                        return res.status(500).json({errors: [ { msg: 'Image failed to upload' } ]});
+                    project.images.push(result.url);
+                });
+            });
+            await project.save();
+        };
+
+        uploadImages();
         
         res.status(200).json({msg: 'succesfully added project'});
     } catch (err) {
@@ -78,10 +94,14 @@ async (req, res) => {
 });
 
 // handle deletion for project
-router.delete('/project/:id', function(req, res){
-    Project.findById(req.params.id)
-        .then(project => project.remove().then(() => res.json({success: true})))
-        .catch(err => res.status(404).json({success: false}));
-});
+// router.delete('/project/:id', async (req, res) => {
+//     try{
+//         await Project.findOneAndRemove({ user: req.user.id });
+//         res.json('deleted successfully');
+//     } catch (err) {
+//         console.err(err.message);
+//         res.status(500).send('Server Error');
+//     }
+// });
 
 module.exports = router;
