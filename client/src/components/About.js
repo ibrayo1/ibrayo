@@ -40,7 +40,7 @@ class About extends Component {
                             </Col>
                         </Row>
                         
-                        <Row>
+                        {/* <Row>
                             <Col lg="3">
                                 <Card style={{height: 300}} />
                             </Col>
@@ -53,7 +53,7 @@ class About extends Component {
                             <Col lg="3">
                                 <Card style={{height: 300}} />
                             </Col>
-                        </Row>
+                        </Row> */}
                     </Container>
                     <br/><br/><br/><br/>
                 </section>
