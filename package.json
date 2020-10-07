@@ -9,7 +9,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "prod": "npm install --prefix client && npm run build --prefix client && NODE_ENV=production node server.js"
   },
   "author": "Ibrahim Ayoob <ibrayo1128@gmail.com> (https://github.com/ibrayo1/CS494-UI.git)",
   "license": "MIT",

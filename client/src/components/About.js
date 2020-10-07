@@ -3,7 +3,8 @@ import Icon from './Icon';
 import {
     Container,
     Row,
-    Col
+    Col,
+    Card
 } from 'reactstrap';
 
 class About extends Component {
@@ -15,7 +16,7 @@ class About extends Component {
                         <h1 className="section-title">ABOUT</h1>            
                         <div className="underline"></div>
 
-                        <Row>
+                        <Row style={{marginBottom: 100}}>
                             <Col lg="4" style={{textAlign: 'center'}}>
                                 <img src={require("../images/me.png")} alt="Ibrahim Ayoob" width="90%" className="profile-pic-crop" />
                             </Col>
@@ -36,11 +37,21 @@ class About extends Component {
                                     <Icon class="email-icon" name="fa fa-envelope-square" link="#contact" size="45px" />
                                 </div>
 
-                                {/* <div style={{textAlign: 'center'}}>
-                                    <a className="projBtn" href="#portfolio">
-                                        View my work
-                                    </a>
-                                </div> */}
+                            </Col>
+                        </Row>
+                        
+                        <Row>
+                            <Col lg="3">
+                                <Card style={{height: 300}} />
+                            </Col>
+                            <Col lg="3">
+                                <Card style={{height: 300}} />
+                            </Col>
+                            <Col lg="3">
+                                <Card style={{height: 300}} />
+                            </Col>
+                            <Col lg="3">
+                                <Card style={{height: 300}} />
                             </Col>
                         </Row>
                     </Container>
