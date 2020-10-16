@@ -58,11 +58,11 @@ async (req, res) => {
 
         // create new proj 
         project = new Project({
-            name: name,
-            stackname: stackname,
-            projdesc: projdesc,
-            projgitlink: projgitlink,
-            projlivelink: projlivelink
+            name,
+            stackname,
+            projdesc,
+            projgitlink,
+            projlivelink
         });
 
         // upload thumbnail image to cloudinary
