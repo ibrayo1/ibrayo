@@ -48,6 +48,10 @@ async (req, res) => {
     // extract data from post request
     const { name, stackname, projdesc, projgitlink, projlivelink, thumbnail, images } = req.body;
 
+    if (images === undefined || images.length == 0) {
+        return res.status(400).json({ errors: [ { msg: "Please enter a valid array of images" } ] });
+    }
+
     try{
         // check if user exists
         let project = await Project.findOne({ name });
