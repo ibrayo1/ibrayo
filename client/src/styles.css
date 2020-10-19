@@ -375,12 +375,15 @@ a.icon:hover, .email-icon:hover{
 }
 
 .learnModalBtn{
+  display: inline-block;
   border-radius: 0px;
   color: white;
   border: none;
   background-color: #142954;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 5px 16px;
+  padding: 0px 16px;
+  min-height: 35px;
+  margin: auto;
   transform: .5s all ease-in-out;
 }
 
@@ -400,6 +403,21 @@ a.icon:hover, .email-icon:hover{
 
 .galleryContainer{
   border-bottom: 4px solid #142954 ;
+}
+
+.skill-card{
+  text-align: center;
+  margin: 15px;
+  background: none;
+  border: none;
+}
+
+.skill-icon{
+  margin: 20px;
+}
+
+.skill-card p{
+  font-family: 'Raleway', sans-serif;
 }
 
 /* @media (max-width: 952px){

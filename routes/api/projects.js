@@ -23,7 +23,7 @@ const Project = require('../../models/Project');
 // get requests that handles geting all the projects
 router.get('/projects', async (req, res) =>{
     try{
-        const projects = await Project.find();
+        const projects = await Project.find().sort({date: -1});
         res.json(projects);
     } catch (err) {
         console.error(err.message);
